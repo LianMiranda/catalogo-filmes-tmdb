@@ -9,10 +9,20 @@ const options = {
 
 const divFilme = document.querySelector("#bloco-filmes");
 const formater = Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short', year: 'numeric'})
-const divPorcentagem = document.querySelector("#porcentagem-line")
 
+function cor(vote_average){
+    if((vote_average * 10).toFixed(0) >= 70){
+      return "green";
+    }
+    
+    if (vote_average * 10 >= 50){
+      return "orange";
+    }
+    
+    return "red";
+}
 
-const filmes = fetch(
+const lista_filmes = fetch(
   "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
   options
   )
@@ -21,7 +31,7 @@ const filmes = fetch(
     console.log(response.results);
     
     response.results.forEach((film) => {
-
+      let color = cor(film.vote_average);
       divFilme.innerHTML += `
       <div class="filme" id=${film.id}>
       
@@ -31,23 +41,19 @@ const filmes = fetch(
         
           <div class="info-geral">
               <div class="circulo-porcentagem">
-                <p id="vote">${(film.vote_average * 10).toFixed(0)}<sup>%</sup></p>
+                <p class="vote">${(film.vote_average * 10).toFixed(0)}<sup>%</sup></p>
               
-                <div class="porcentagem-line" id="porcentagem-line">
-                  
-                </div>
+                <div class="porcentagem-line ${color}"></div>
               </div>
               
               <div class= "info-filme">
                 <a href=""><h2 class = "title">${film.title}</h2></a>
-                <p id="date">${formater.format(new Date(film.release_date))}</p>
+                <p class="date">${formater.format(new Date(film.release_date))}</p>
               </div>
             </div>
         </div>
       </div>
-
-
-      `;
+    `;
     });
   })
   .catch((err) => console.error(err));

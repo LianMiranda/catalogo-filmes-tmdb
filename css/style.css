@@ -1,206 +1,215 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body{
-    width: 100%;
-    height: 100%;
-    font-family: "Source Sans Pro",Arial,sans-serif;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
-.header, .header-p1, .header-p2, .link-mais{
-    display: flex;
-    align-items: center;
+.header,
+.header-p1,
+.header-p2,
+.link-mais {
+  display: flex;
+  align-items: center;
 }
 
-.header{
-    justify-content: space-between;
-    width: 100%;
-    height: 64px;
-    background-color: rgb(3, 37, 65);
-    padding: 0px 40px;
+.header {
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  background-color: rgb(3, 37, 65);
+  padding: 0px 40px;
 }
 
-.header .header-p1{
-    justify-content: flex-start;
-    gap: 25px;
+.header .header-p1 {
+  justify-content: flex-start;
+  gap: 25px;
 }
-.header .header-p1 img{
-    width: 154px;
-    height: 30px;
-}
-
-.header .header-p1 a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: "Source Sans Pro",Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 500;
+.header .header-p1 img {
+  width: 154px;
+  height: 30px;
 }
 
-.header .header-p2{
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-}
-.header .header-p2 .link-mais{
-    justify-content: center;
-}
-.header .header-p2 .img-mais{
-    width: 28px;
-    height: 28px;
+.header .header-p1 a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
-.header .header-p2 a{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-family: "Source Sans Pro",Arial,sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+.header .header-p2 {
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+}
+.header .header-p2 .link-mais {
+  justify-content: center;
+}
+.header .header-p2 .img-mais {
+  width: 28px;
+  height: 28px;
 }
 
-.header .header-p2 .language{
-    display: flex;
-    width: 28px;
-    height: 26px;
-    text-align: center;
-    border: 1px solid white;
-    border-radius: 4px;
-    font-size: 0.8em;
-    color: white;
-    background-color: transparent;
+.header .header-p2 a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-.header .header-p2 .language span{
-    padding-top: 4px;
-    width: 100%;
-    height: 100%;
-    transition: linear .1s;
-    cursor: pointer;
+.header .header-p2 .language {
+  display: flex;
+  text-align: center;
+  width: 28px;
+  height: 26px;
+  border: 1px solid white;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: transparent;
+  color: white;
 }
-.header .header-p2 .language span:hover{
-    background-color: #FFFFFF;
-    color: rgb(3, 37, 65);
+
+.header .header-p2 .language span {
+  padding-top: 4px;
+  width: 100%;
+  height: 100%;
+  transition: linear 0.1s;
+  cursor: pointer;
+}
+.header .header-p2 .language span:hover {
+  background-color: #ffffff;
+  color: rgb(3, 37, 65);
 }
 
 /*Fim header*/
 
 /* Inicio page */
-.page{
-    width: 100%;
-    height: 100%;
-    padding: 30px 40px;;
+.page {
+  width: 100%;
+  height: 100%;
+  padding: 30px 40px;
 }
-.title{
-   font-size: 16px;
-}
-
-.page #bloco-filmes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0px 30px;
-    flex-wrap: wrap;
-    gap: 30px;
+.title {
+  font-size: 16px;
 }
 
-
-.page #bloco-filmes .filme{
-    max-width: 200px;
-    min-height: 355px;
-    padding: 20px 0px 0px 0px;
-    border-radius: 4px;
-    background-color: #FFFFFF;
+.page #bloco-filmes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 30px;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
-.page #bloco-filmes .filme-card{
-    width: auto;
-    height: 400px;
-    border: 1px solid #e3e3e3;
-    border-radius:  8px;   
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+.page #bloco-filmes .filme {
+  max-width: 200px;
+  min-height: 355px;
+  padding: 20px 0px 0px 0px;
+  border-radius: 4px;
+  background-color: #ffffff;
 }
 
-.page #bloco-filmes img{
-    width: 100%;
-    height: 100;
-    border-radius: 4px 4px 0px 0px;
-}
-.page #bloco-filmes .info-filme{
-    width: 100%;
-    height: 100%;
-    padding: 26px 10px 12px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-   top: -45px;
-   
+.page #bloco-filmes .filme-card {
+  width: auto;
+  height: 400px;
+  border: 1px solid #e3e3e3;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 
-.page #bloco-filmes a{
-    text-decoration: none;
-    font-family: "Source Sans Pro",Arial,sans-serif;
-    font-size:16px;
-    font-weight: 700;
-    color: #000000;
+.page #bloco-filmes img {
+  width: 100%;
+  height: 100;
+  border-radius: 4px 4px 0px 0px;
 }
-.page #bloco-filmes a:hover{
-    color: rgb(1,180,228);
+.page #bloco-filmes .info-filme {
+  width: 100%;
+  height: 100%;
+  padding: 26px 10px 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -45px;
+}
+
+.page #bloco-filmes a {
+  text-decoration: none;
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+.page #bloco-filmes a:hover {
+  color: rgb(1, 180, 228);
+}
+
+.page #bloco-filmes .date {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  font-size: 16px;
+  color: #00000099;
+  text-transform: lowercase;
+  padding: 5px 0px;
+}
+
+.page #bloco-filmes .info-geral {
+  width: 100%;
+  height: 78px;
+}
+.page #bloco-filmes .circulo-porcentagem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 45px;
+  height: 45px;
+  background-color: #081c22;
+  border-radius: 50%;
+  top: -27px;
+  left: 10px;
+  box-sizing: border-box;
+}
+.page #bloco-filmes .circulo-porcentagem p {
+  position: absolute;
+  font-size: 14px;
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.page #bloco-filmes .circulo-porcentagem sup {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  font-size: 8px;
+}
+
+.page #bloco-filmes .circulo-porcentagem .porcentagem-line {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
 
 }
 
-.page #bloco-filmes #date{
-    font-family: "Source Sans Pro",Arial,sans-serif;
-    font-size:16px;
-    color: #00000099;
-    text-transform: lowercase;
-    padding: 5px 0px;
+.porcentagem-line.green {
+    border: 2.5px solid green;
 }
 
+.porcentagem-line.orange {
+    border: 2.5px solid orange;
+  }
 
-.page #bloco-filmes .info-geral{
-    width: 100%;
-    height: 78px;
-    
-}
-.page #bloco-filmes .circulo-porcentagem{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    max-width: 45px;
-    height: 45px;
-    background-color: #081c22;
-    border-radius: 50%;
-    top: -27px;
-    left: 10px;
-    box-sizing: border-box;
-}
-
-.page #bloco-filmes .circulo-porcentagem .porcentagem-line{
-    width: 40px;
-    height: 40px;
-    background-color: transparent;
-    border-radius: 50%;
-    border: 2.5px solid blue;
-
-}
-
-.page #bloco-filmes .circulo-porcentagem  p{
-    position: absolute;
-    font-size: 14px;
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-    color: #FFFFFF; 
-    font-weight: 600;
-}
-
-.page #bloco-filmes .circulo-porcentagem  sup{
-    font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
-    color: #FFFFFF; 
-    font-size: 8px;
-}
+.porcentagem-line.red {
+    border: 2.5px solid red;
+  }
 
 /* FIM PAGE */
