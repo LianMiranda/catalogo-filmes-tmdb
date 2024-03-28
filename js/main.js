@@ -15,11 +15,13 @@ function cor(vote_average){
       return "green";
     }
     
-    if (vote_average * 10 >= 50){
+    if ((vote_average * 10).toFixed(0) >=40){
       return "orange";
     }
-    
-    return "red";
+    else{
+      return "red";
+
+    }
 }
 
 const lista_filmes = fetch(
@@ -31,14 +33,17 @@ const lista_filmes = fetch(
     console.log(response.results);
     
     response.results.forEach((film) => {
-      let color = cor(film.vote_average);
+      let color = cor(film.vote_average)
+      
       divFilme.innerHTML += `
       <div class="filme" id=${film.id}>
       
         <div class="filme-card">
 
-          <img src=https://image.tmdb.org/t/p/w200${film.poster_path}>
-        
+          <img src="https://image.tmdb.org/t/p/w200${film.poster_path}">
+
+         <a class="btn-filme"><img src="./assets/img-btn-filme.png" alt="" /></a>
+
           <div class="info-geral">
               <div class="circulo-porcentagem">
                 <p class="vote">${(film.vote_average * 10).toFixed(0)}<sup>%</sup></p>
