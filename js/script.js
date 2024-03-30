@@ -3,38 +3,42 @@ const options = {
   headers: {
     accept: "application/json",
     Authorization:
-    "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMjEzODE5MzM0NDlkNWQxNWY3ZDBiNmE2YjFmODdhMSIsInN1YiI6IjYxMTcxNmY0MzUwMzk4MDAyZGI3Yzk1YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ys_LkZ7sDiPL14OdvOVP0N5VZr3-IbyR1G4BwIeCLXs",
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMjEzODE5MzM0NDlkNWQxNWY3ZDBiNmE2YjFmODdhMSIsInN1YiI6IjYxMTcxNmY0MzUwMzk4MDAyZGI3Yzk1YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ys_LkZ7sDiPL14OdvOVP0N5VZr3-IbyR1G4BwIeCLXs",
   },
 };
 
 const divFilme = document.querySelector("#bloco-filmes");
-const formater = Intl.DateTimeFormat('pt-BR', { day: 'numeric', month: 'short', year: 'numeric'})
 
-function cor(vote_average){
-    if((vote_average * 10).toFixed(0) >= 70){
-      return "green";
-    }
-    
-    if ((vote_average * 10).toFixed(0) >=40){
-      return "orange";
-    }
-    else{
-      return "red";
+const formater = Intl.DateTimeFormat("pt-BR", {
+  day: "numeric",
+  month: "short",
+  year: "numeric",
+});
 
-    }
+//Funcão para mudar cor da linha da porcentagem
+function cor(vote_average) {
+  if ((vote_average * 10).toFixed(0) >= 70) {
+    return "green";
+  }
+  else if  ((vote_average * 10).toFixed(0) >= 40) {
+    return "yellow";
+  }
+  else{
+    return "red";
+  }
 }
 
 const lista_filmes = fetch(
   "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1",
   options
-  )
+)
   .then((response) => response.json())
   .then((response) => {
     console.log(response.results);
-    
+
     response.results.forEach((film) => {
-      let color = cor(film.vote_average)
-      
+      let color = cor(film.vote_average);
+
       divFilme.innerHTML += `
       <div class="filme" id=${film.id}>
       
@@ -42,7 +46,7 @@ const lista_filmes = fetch(
 
           <img src="https://image.tmdb.org/t/p/w200${film.poster_path}">
 
-         <a class="btn-filme"><img src="./assets/img-btn-filme.png" alt="" /></a>
+         <img class="btn-filme" src="./assets/img-btn-filme.png" alt=""/>
 
           <div class="info-geral">
               <div class="circulo-porcentagem">
@@ -62,4 +66,3 @@ const lista_filmes = fetch(
     });
   })
   .catch((err) => console.error(err));
-  

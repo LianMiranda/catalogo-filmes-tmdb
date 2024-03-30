@@ -11,6 +11,7 @@ body {
   font-family: "Source Sans Pro", Arial, sans-serif;
 }
 
+/* Inicio HEADER */
 .header,
 .header-p1,
 .header-p2,
@@ -31,6 +32,7 @@ body {
   justify-content: flex-start;
   gap: 25px;
 }
+
 .header .header-p1 img {
   width: 154px;
   height: 30px;
@@ -39,7 +41,6 @@ body {
 .header .header-p1 a {
   text-decoration: none;
   color: #ffffff;
-  font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
@@ -49,9 +50,11 @@ body {
   justify-content: center;
   gap: 30px;
 }
+
 .header .header-p2 .link-mais {
   justify-content: center;
 }
+
 .header .header-p2 .img-mais {
   width: 28px;
   height: 28px;
@@ -60,7 +63,6 @@ body {
 .header .header-p2 a {
   text-decoration: none;
   color: #ffffff;
-  font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 16px;
   font-weight: 400;
 }
@@ -84,12 +86,13 @@ body {
   transition: linear 0.1s;
   cursor: pointer;
 }
+
 .header .header-p2 .language span:hover {
   background-color: #ffffff;
   color: rgb(3, 37, 65);
 }
 
-/*Fim header*/
+/*Fim HEADER*/
 
 /* Inicio page */
 .page {
@@ -97,6 +100,7 @@ body {
   height: 100%;
   padding: 30px 40px;
 }
+
 .title {
   font-size: 16px;
 }
@@ -129,18 +133,23 @@ body {
 
 .page #bloco-filmes img {
   width: 100%;
-  height: 272px;
+  height: 300px;
   border-radius: 4px 4px 0px 0px;
 }
 
-.page #bloco-filmes .btn-filme img{
-    width: 24px;
-    height: 22px;
-    top: -266px;
-    left: 167px;
-    position: relative;
-    cursor: pointer;
-    opacity: 0.7;
+.page #bloco-filmes .btn-filme {
+  width: 26px;
+  height: 22px;
+  top: -290px;
+  left: 163px;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.page #bloco-filmes .btn-filme:hover {
+  filter: invert(51%) sepia(30%) saturate(3076%) hue-rotate(157deg) brightness(99%) contrast(99%);
+  opacity: 1;
 }
 
 .page #bloco-filmes .info-filme {
@@ -155,17 +164,16 @@ body {
 
 .page #bloco-filmes a {
   text-decoration: none;
-  font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 16px;
   font-weight: 700;
   color: #000000;
 }
+
 .page #bloco-filmes a:hover {
   color: rgb(1, 180, 228);
 }
 
 .page #bloco-filmes .date {
-  font-family: "Source Sans Pro", Arial, sans-serif;
   font-size: 16px;
   color: #00000099;
   text-transform: lowercase;
@@ -176,10 +184,12 @@ body {
   width: 100%;
   height: 78px;
 }
-.page #bloco-filmes .circulo-porcentagem {
+
+
+.page #bloco-filmes .circulo-porcentagem { /* Estilizando porcentagem */
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   position: relative;
   max-width: 45px;
   height: 45px;
@@ -189,16 +199,15 @@ body {
   left: 10px;
   box-sizing: border-box;
 }
+
 .page #bloco-filmes .circulo-porcentagem p {
   position: absolute;
   font-size: 14px;
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   color: #ffffff;
   font-weight: 600;
 }
 
 .page #bloco-filmes .circulo-porcentagem sup {
-  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
   color: #ffffff;
   font-size: 8px;
 }
@@ -208,19 +217,24 @@ body {
   height: 40px;
   background-color: transparent;
   border-radius: 50%;
-
 }
 
 .porcentagem-line.green {
-    border: 2.5px solid green;
+  border: 2.5px solid green;
 }
 
-.porcentagem-line.orange {
-    border: 2.5px solid yellow;
-  }
+.porcentagem-line.yellow {
+  border: 2.5px solid yellow;
+}
 
 .porcentagem-line.red {
-    border: 2.5px solid red;
-  }
+  border: 2.5px solid red;
+}
 
 /* FIM PAGE */
+
+footer {
+  width: 100%;
+  height: 64px;
+  background-color: rgb(3, 37, 65);
+}
